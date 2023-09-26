@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E87AF"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wishlistRV"
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/item_name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/urlInput"
+        app:layout_constraintEnd_toStartOf="@+id/priceInput"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/priceInput"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/item_price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/nameInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameInput"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Autofill,MissingConstraints" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/add_to_wishlist"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/urlInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/urlInput"
+        app:layout_constraintTop_toTopOf="@+id/urlInput"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <EditText
+        android:id="@+id/urlInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:hint="@string/item_url"
+        android:textColor="@color/black"
+        android:background="#FFFFFF"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nameInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameInput"
+        tools:ignore="Autofill,MissingConstraints,TextFields" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
